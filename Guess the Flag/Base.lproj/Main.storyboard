@@ -16,27 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-UV-aZN">
-                                <rect key="frame" x="107" y="209" width="200" height="100"/>
-                                <state key="normal" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igs-2z-ZQG">
-                                <rect key="frame" x="107" y="548" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="germany"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1D-Ye-9jx">
-                                <rect key="frame" x="107" y="379" width="200" height="100"/>
-                                <state key="normal" image="russia"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dwh-bm-G9v">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-UV-aZN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="231.5"/>
+                                        <state key="normal" image="us"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJX-eB-b4t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1D-Ye-9jx">
+                                        <rect key="frame" x="0.0" y="251.5" width="374" height="231"/>
+                                        <state key="normal" image="russia"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIq-IH-vTA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igs-2z-ZQG">
+                                        <rect key="frame" x="0.0" y="502.5" width="374" height="231.5"/>
+                                        <state key="normal" image="germany"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYJ-pb-PcG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TX7-UV-aZN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="7lk-wU-yJT"/>
-                            <constraint firstItem="TX7-UV-aZN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XPh-FG-mfz"/>
-                            <constraint firstItem="h1D-Ye-9jx" firstAttribute="top" secondItem="TX7-UV-aZN" secondAttribute="bottom" constant="70" id="q6h-G0-zmM"/>
-                            <constraint firstItem="h1D-Ye-9jx" firstAttribute="centerX" secondItem="TX7-UV-aZN" secondAttribute="centerX" id="vlV-sH-ktD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dwh-bm-G9v" secondAttribute="trailing" constant="20" id="RiE-oT-VdL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dwh-bm-G9v" secondAttribute="bottom" constant="20" id="VcM-CX-TdW"/>
+                            <constraint firstItem="dwh-bm-G9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lOR-s4-u8L"/>
+                            <constraint firstItem="dwh-bm-G9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zby-LQ-dzz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5rX-ji-UeV"/>
